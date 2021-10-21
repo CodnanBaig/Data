@@ -2,8 +2,6 @@
 
 <html>
   <head>
-    <!-- Favicon -->
-    <!--link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.ico')}}"-->
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -50,7 +48,7 @@
             <h4>Enter CSV Data</h4>
             <form method="post">
                 <textarea name="data-input" class="form-control" id="data-input" rows="10"></textarea>
-                <button class="btn" type="button" onclick="createData()">Create</button>                
+                <button class="btn" type="submit" onclick="createData()">Create</button>                
             </form>            
         </div>
     </div>
@@ -64,11 +62,3 @@
         <p>All Rights Reserved</p>
     </footer>
 </html>
-<script>
-  function createData(){
-    const input = document.getElementById('data-input').value;
-    if (input === ''){
-      alert("Please Enter Data")
-    }
-  }
-</script>

@@ -15,6 +15,12 @@ a {
   font-size: large;
 }
 
+.error {
+  text-align: center;
+  padding: 15%;
+}
+
+
 .options {
   background-image: url("bg.jpg");
   background-attachment: fixed;
@@ -92,6 +98,7 @@ input {
   border: none;
   border-radius: 10px;
   margin-right: 10px;
+  text-align: center;
 }
 
 #proxies_length, .dataTables_info {

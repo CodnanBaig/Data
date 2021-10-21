@@ -2,8 +2,6 @@
 
 <html>
   <head>
-    <!-- Favicon -->
-    <!--link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.ico')}}"-->
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -51,7 +49,7 @@
     <div id="data-table" class="container data">
     <table id="proxies" class="display nowrap" style="width: 100%;">
         <thead id="table_head">
-          <tr contenteditable="true">
+          <tr>
             {% for header in result[0].keys() %}
               <th contenteditable="true">{{ header }}</th>
             {% endfor %}
@@ -60,27 +58,27 @@
         <tbody>
           {% for row in result %}
             <tr>
-              <td contenteditable="true">{{ row['CLIENTNUM'] }}</td>
-              <td contenteditable="true">{{ row['Attrition_Flag'] }}</td>
-              <td contenteditable="true">{{ row['Customer_Age'] }}</td>
-              <td contenteditable="true">{{ row['Gender'] }}</td>
-              <td contenteditable="true">{{ row['Dependent_count'] }}</td>
-              <td contenteditable="true">{{ row['Education_Level'] }}</td>
-              <td contenteditable="true">{{ row['Marital_Status'] }}</td>
-              <td contenteditable="true">{{ row['Income_Category'] }}</td>
-              <td contenteditable="true">{{ row['Card_Category'] }}</td>
-              <td contenteditable="true">{{ row['Months_on_book'] }}</td>
-              <td contenteditable="true">{{ row['Total_Relationship_Count'] }}</td>
-              <td contenteditable="true">{{ row['Months_Inactive_12_mon'] }}</td>
-              <td contenteditable="true">{{ row['Contacts_Count_12_mon'] }}</td>
-              <td contenteditable="true">{{ row['Credit_Limit'] }}</td>
-              <td contenteditable="true">{{ row['Total_Revolving_Bal'] }}</td>
-              <td contenteditable="true">{{ row['Avg_Open_To_Buy'] }}</td>
-              <td contenteditable="true">{{ row['Total_Amt_Chng_Q4_Q1'] }}</td>
-              <td contenteditable="true">{{ row['Total_Trans_Amt'] }}</td>
-              <td contenteditable="true">{{ row['Total_Trans_Ct'] }}</td>
-              <td contenteditable="true">{{ row['Total_Ct_Chng_Q4_Q1'] }}</td>
-              <td contenteditable="true">{{ row['Avg_Utilization_Ratio'] }}</td>
+              <td>{{ row['CLIENTNUM'] }}</td>
+              <td>{{ row['Attrition_Flag'] }}</td>
+              <td>{{ row['Customer_Age'] }}</td>
+              <td>{{ row['Gender'] }}</td>
+              <td>{{ row['Dependent_count'] }}</td>
+              <td>{{ row['Education_Level'] }}</td>
+              <td>{{ row['Marital_Status'] }}</td>
+              <td>{{ row['Income_Category'] }}</td>
+              <td>{{ row['Card_Category'] }}</td>
+              <td>{{ row['Months_on_book'] }}</td>
+              <td>{{ row['Total_Relationship_Count'] }}</td>
+              <td>{{ row['Months_Inactive_12_mon'] }}</td>
+              <td>{{ row['Contacts_Count_12_mon'] }}</td>
+              <td>{{ row['Credit_Limit'] }}</td>
+              <td>{{ row['Total_Revolving_Bal'] }}</td>
+              <td>{{ row['Avg_Open_To_Buy'] }}</td>
+              <td>{{ row['Total_Amt_Chng_Q4_Q1'] }}</td>
+              <td>{{ row['Total_Trans_Amt'] }}</td>
+              <td>{{ row['Total_Trans_Ct'] }}</td>
+              <td>{{ row['Total_Ct_Chng_Q4_Q1'] }}</td>
+              <td>{{ row['Avg_Utilization_Ratio'] }}</td>
             </tr>
           {% endfor %}
         </tbody>
@@ -90,7 +88,7 @@
         <div class="control">
           <div class="row no-gutters">
             <div class="col no-gutters">
-              <button type="button" class="btn" onclick="editData()">Edit Data</button>
+              <a href="edit-data.html"><button type="submit" class="btn">Edit Data</button></a>
             </div>         
             <div class="col no-gutters">
               <button type="button" class="btn" onclick="deleteData()">Delete Data</button>
@@ -125,12 +123,4 @@ function deleteData(){
   var Table = document.getElementById("data-table");
   Table.innerHTML = "";
 }
-
-function editData(){
-
-    const table_head = document.getElementById('table_head');
-    table_head.innerHTML =  'Hey'
-
-}
-
 </script>
