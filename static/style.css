@@ -5,6 +5,10 @@
   font-family: "Inter", sans-serif;
 }
 
+body {
+  min-height: 100vh;
+}
+
 ul {
   list-style: none;
 }
@@ -30,6 +34,11 @@ a {
   height: 100vh;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .projects {
   text-align: center;
   padding-top: 10%;
@@ -45,8 +54,12 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  min-height: calc(100vh - 1px);
 }
 
+.show-data {
+  height: 90%;
+}
 
 .list {
   border-radius: 10px;
@@ -128,7 +141,7 @@ select {
 }
 
 .action {
-  padding-bottom: 2%;
+  padding-bottom: 1%;
   padding-top: 0px;
 }
 
@@ -139,6 +152,5 @@ select {
 footer {
   background-color: #f6f9fc;
   text-align: center;
-  padding-top: 2%;
-  padding-bottom: 1%;
+  padding-top: 1%;
 }

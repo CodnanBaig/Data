@@ -45,7 +45,7 @@
       </div>
     </nav>
     <div class="content">
-      <h3>EDIT DATA</h3>
+      <h3>Edit Data</h3>
       <hr>
     <div id="data-table" class="container data">
     <table id="proxies" class="display nowrap" style="width: 100%;">
@@ -59,8 +59,8 @@
           <tbody>
             {% for row in result %}
                 <tr>
-                    <td id="col-names"contenteditable="true">{{ row['Column Names'] }}</td>
-                    <td id="col-names"contenteditable="true">{{ row['Include'] }}</td>
+                    <td contenteditable="true">{{ row['Column Names'] }}</td>
+                    <td contenteditable="true">{{ row['Include'] }}</td>
                     <td><select size="1" id="include" name="include">
                     <option value="Yes" selected="selected">
                         Yes
@@ -82,13 +82,14 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+    </div>
+    </body>
   <footer>
     <a class="navbar-brand logo" href="https://www.betterdata.ai/" style="color: #635bff;">betterdata</a>
-    <a href="https://www.facebook.com/betterdataai"><i class="fa-brands fa-facebook fa-xl"></i></a>
-    <a href="https://twitter.com/betterdataai"><i class="fa-brands fa-twitter fa-xl"></i></a>
-    <a href="https://www.linkedin.com/company/betterdataai/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-    <a href="https://www.youtube.com/watch?v=Vsm0Q9YjsvA&t=1s"><i class="fa-brands fa-youtube fa-xl"></i></a>
+    <a href="https://www.facebook.com/betterdataai"><i class="fa-brands fa-facebook fa-sm"></i></a>
+    <a href="https://twitter.com/betterdataai"><i class="fa-brands fa-twitter fa-sm"></i></a>
+    <a href="https://www.linkedin.com/company/betterdataai/"><i class="fa-brands fa-linkedin fa-sm"></i></a>
+    <a href="https://www.youtube.com/watch?v=Vsm0Q9YjsvA&t=1s"><i class="fa-brands fa-youtube fa-sm"></i></a>
     <p>All Rights Reserved</p>
 </footer>
 </html>
